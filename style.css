@@ -1,0 +1,306 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f8fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background: linear-gradient(to bottom, #75c9ed, #dff5ff);
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 5px solid #ffffff;
+}
+
+header h1 {
+    margin: 0 0 15px;
+    color: #12658a;
+    font-size: 36px;
+}
+
+header p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 17px;
+}
+
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+
+/* =========================
+   SOBRE O QUIZ
+========================= */
+
+#sobre-quiz {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+}
+
+#sobre-quiz h2 {
+    color: #12658a;
+}
+
+
+/* =========================
+   QUESTÕES
+========================= */
+
+#quizForm section {
+    background-color: white;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 15px;
+    border-left: 6px solid #75c9ed;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+}
+
+#quizForm h2 {
+    font-size: 20px;
+    color: #12658a;
+    margin-top: 0;
+}
+
+
+/* =========================
+   ALTERNATIVAS
+========================= */
+
+#quizForm input[type="radio"],
+#quizForm input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+#quizForm label {
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px 0;
+    padding: 4px;
+}
+
+#quizForm label:hover {
+    color: #12658a;
+}
+
+
+/* =========================
+   RESULTADO
+========================= */
+
+#resultado-conteiner {
+    display: none;
+    background-color: white;
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 15px;
+    text-align: center;
+    border: 3px solid #75c9ed;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#resultado-conteiner h2 {
+    color: #12658a;
+}
+
+#testo-resultado {
+    font-size: 20px;
+}
+
+
+/* =========================
+   TABELA
+========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-top: 15px;
+}
+
+th {
+    background-color: #75c9ed;
+    color: #123;
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f4fbff;
+}
+
+
+/* =========================
+   RESPOSTAS
+========================= */
+
+details {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #12658a;
+}
+
+
+/* =========================
+   BOTÃO DO QUIZ
+========================= */
+
+button {
+    background-color: #12658a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #0d4d69;
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   FEEDBACK
+========================= */
+
+fieldset {
+    background-color: white;
+    border: 2px solid #75c9ed;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+legend {
+    color: #12658a;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin: 6px 0 12px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    background-color: #12658a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    #quizForm section {
+        padding: 18px;
+    }
+
+    #quizForm h2 {
+        font-size: 18px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+}
+
+/* =========================
+   FEEDBACK DAS QUESTÕES
+========================= */
+
+.feedback-questao {
+    margin-top: 15px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.resposta-certa {
+    background-color: #dff5e3;
+    color: #218838;
+    border-left: 5px solid #28a745;
+}
+
+.resposta-errada {
+    background-color: #ffe1e1;
+    color: #c62828;
+    border-left: 5px solid #dc3545;
+}
+
+.resposta-nao-marcada {
+    background-color: #fff3cd;
+    color: #856404;
+    border-left: 5px solid #ffc107;
+}
+
+.resposta-correta {
+    display: block;
+    margin-top: 8px;
+    font-weight: normal;
+}
